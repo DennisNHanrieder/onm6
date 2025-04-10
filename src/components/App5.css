@@ -1,0 +1,87 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.grayscale {
+  filter: grayscale(100%)
+}
+
+.sepia {
+  filter: sepia(100%)
+}
+
+.blur {
+  filter:blur(3px)
+}
+
+.gb {
+  filter: grayscale(100%) blur(3px)
+}
+
+/* === Illuminati Conspiracy Theme === */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('./assets/illuminati-bg-.png.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #003322;
+}
+
+h1, h2, h3, p {
+  color: #00ffcc;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* === Cryptic Conspiracy Animations === */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0;
+  }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.secret-message {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: #00ffcc;
+  animation: flicker 2s infinite;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.secret-message:hover {
+  animation: glitch 0.5s infinite;
+  color: #ff00ff;
+}
+
+.glitch {
+  margin-left: 0.5rem;
+  opacity: 0.6;
+  font-family: 'Courier New', Courier, monospace;
+}
